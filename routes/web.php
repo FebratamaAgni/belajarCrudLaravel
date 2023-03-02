@@ -23,6 +23,10 @@ Route::get('/pegawai', [EmployeeController::class, 'index'])->name('pegawai');
 
 // route untuk tampilan tambah pegawai
 Route::get('/tambahpegawai', [EmployeeController::class, 'tambahpegawai'])->name('tambahpegawai');
-
 // route untuk fungsi tambah data pegawai(create)
 Route::post('/insertdata', [EmployeeController::class, 'insertdata'])->name('insertdata');
+
+// route untuk tampilan edit data pegawai
+Route::get('/updatepegawai/{id}', [EmployeeController::class, 'updatepegawai'])->name('updatepegawai');
+// route untuk fungsi edit data pegawai(update)
+Route::post('/updatedata/{id}', [EmployeeController::class, 'updatedata'])->name('updatedata');

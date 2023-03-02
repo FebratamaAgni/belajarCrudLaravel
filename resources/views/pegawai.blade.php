@@ -36,7 +36,7 @@
                      <td>{{ $datas->noHP }}</td>
                      <td>{{ $datas->created_at->format('D M Y') }}</td>
                      <td>
-                        <button type="button" class="btn btn-info text-white">Edit</button>
+                        <a href="/updatepegawai/{{ $datas->id }}" class="btn btn-info text-white">Edit</a>
                         <button type="button" class="btn btn-danger">Hapus</button>
                      </td>
                   </tr>      
