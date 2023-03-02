@@ -10,11 +10,11 @@
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
 </head>
 <body>
+   <h1 class="text-center mb-4">Data Pegawai</h1>
    <div class="container">
       <div class="row">
          <div class="col">
-            <h1 class="text-center mb-4">Data Pegawai</h1>
-            <button type="button" class="btn btn-success my-4">Tambah Data Pegawai</button>
+            <a href="/tambahpegawai" class="btn btn-success my-4">Tambah Data Pegawai</a>
             <table class="table">
                <thead>
                   <tr>
@@ -22,21 +22,25 @@
                      <th scope="col">Nama</th>
                      <th scope="col">Jenis Kelamin</th>
                      <th scope="col">Nomor HP</th>
+                     <th scope="col">Dibuat</th>
                      <th scope="col" class="">Aksi</th>
                   </tr>
                </thead>
                <tbody>
+                  <?php $i=1 ?>
                   @foreach ($data as $datas)
                   <tr>
-                     <th scope="row">{{ $datas->id }}</th>
+                     <th> <?php echo $i ?> </th>
                      <td>{{ $datas->nama }}</td>
                      <td>{{ $datas->jenisKelamin }}</td>
                      <td>{{ $datas->noHP }}</td>
+                     <td>{{ $datas->created_at->format('D M Y') }}</td>
                      <td>
                         <button type="button" class="btn btn-info text-white">Edit</button>
                         <button type="button" class="btn btn-danger">Hapus</button>
                      </td>
                   </tr>      
+                  <?php $i++ ?>
                   @endforeach                  
                </tbody>
             </table>
