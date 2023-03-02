@@ -30,17 +30,16 @@
                   <?php $i=1 ?>
                   @foreach ($data as $datas)
                   <tr>
-                     <th> <?php echo $i ?> </th>
+                     <th> {{ $i++ }} </th>
                      <td>{{ $datas->nama }}</td>
                      <td>{{ $datas->jenisKelamin }}</td>
                      <td>{{ $datas->noHP }}</td>
                      <td>{{ $datas->created_at->format('D M Y') }}</td>
                      <td>
                         <a href="/updatepegawai/{{ $datas->id }}" class="btn btn-info text-white">Edit</a>
-                        <button type="button" class="btn btn-danger">Hapus</button>
+                        <a href="/hapuspegawai/{{ $datas->id }}" class="btn btn-danger">Hapus</a>
                      </td>
                   </tr>      
-                  <?php $i++ ?>
                   @endforeach                  
                </tbody>
             </table>

@@ -29,12 +29,18 @@ class EmployeeController extends Controller
         $data = employee::find($id);
         return view('updatepegawai', compact('data'));
     }
-
     // untuk fungsi edit data pegawai(update)
     public function updatedata(Request $request, $id){
         $data = employee::find($id);
         $data->update($request->all());
         return redirect()->route('pegawai')->with('success', 'Data Pegawai Berhasil di Update');
+    }
+
+    // untuk menampilkan halaman hapus data pegawai
+    public function hapuspegawai($id){
+        $data = employee::find($id);
+        $data->delete();
+        return redirect()->route('pegawai')->with('success', 'Data Pegawai Berhasil di Hapus');
     }
 
 

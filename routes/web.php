@@ -30,3 +30,5 @@ Route::post('/insertdata', [EmployeeController::class, 'insertdata'])->name('ins
 Route::get('/updatepegawai/{id}', [EmployeeController::class, 'updatepegawai'])->name('updatepegawai');
 // route untuk fungsi edit data pegawai(update)
 Route::post('/updatedata/{id}', [EmployeeController::class, 'updatedata'])->name('updatedata');
+
+Route::get('/hapuspegawai/{id}', [EmployeeController::class, 'hapuspegawai'])->name('hapuspegawai');
