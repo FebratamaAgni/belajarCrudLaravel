@@ -31,4 +31,5 @@ Route::get('/updatepegawai/{id}', [EmployeeController::class, 'updatepegawai'])-
 // route untuk fungsi edit data pegawai(update)
 Route::post('/updatedata/{id}', [EmployeeController::class, 'updatedata'])->name('updatedata');
 
+// route untuk fungsi hapus data pegawai(delete)
 Route::get('/hapuspegawai/{id}', [EmployeeController::class, 'hapuspegawai'])->name('hapuspegawai');

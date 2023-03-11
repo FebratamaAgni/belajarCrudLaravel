@@ -36,7 +36,7 @@ class EmployeeController extends Controller
         return redirect()->route('pegawai')->with('success', 'Data Pegawai Berhasil di Update');
     }
 
-    // untuk menampilkan halaman hapus data pegawai
+    // untuk fungsi hapus data pegawai
     public function hapuspegawai($id){
         $data = employee::find($id);
         $data->delete();
